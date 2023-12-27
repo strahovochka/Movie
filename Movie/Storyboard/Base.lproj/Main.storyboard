@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MXQ-JK-jjZ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aXO-BL-gxK">
+            <objects>
+                <navigationController id="MXQ-JK-jjZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bra-5z-qGj">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5ha-IX-aNU" kind="relationship" relationship="rootViewController" id="EJx-rW-Y8v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0T-9D-v59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="191"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="V6Y-HZ-8AU">
+            <objects>
+                <viewController id="5ha-IX-aNU" customClass="MainViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e2K-Re-9l1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-A4-fd6">
+                                <rect key="frame" x="16" y="119" width="361" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JKo-mZ-l51"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JKo-mZ-l51" firstAttribute="bottom" secondItem="bWt-A4-fd6" secondAttribute="bottom" constant="8" id="Dxf-j8-HLy"/>
+                            <constraint firstItem="bWt-A4-fd6" firstAttribute="top" secondItem="JKo-mZ-l51" secondAttribute="top" constant="16" id="Eli-Fk-jmg"/>
+                            <constraint firstItem="JKo-mZ-l51" firstAttribute="trailing" secondItem="bWt-A4-fd6" secondAttribute="trailing" constant="16" id="Rx4-YO-PNX"/>
+                            <constraint firstItem="bWt-A4-fd6" firstAttribute="leading" secondItem="JKo-mZ-l51" secondAttribute="leading" constant="16" id="ZJP-4w-CCh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movies" largeTitleDisplayMode="always" id="DPV-JF-Jrk"/>
+                    <connections>
+                        <outlet property="tableView" destination="bWt-A4-fd6" id="oIg-82-ldx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLh-AN-qtB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="191"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
