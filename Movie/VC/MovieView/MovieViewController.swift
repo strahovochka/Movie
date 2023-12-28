@@ -76,6 +76,10 @@ class MovieViewController: UIViewController {
 
 extension MovieViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
 extension MovieViewController: UITableViewDataSource {
@@ -106,6 +110,7 @@ extension MovieViewController: UITableViewDataSource {
             cell.watchTrailerButton.layer.borderColor = UIColor.black.cgColor
             cell.watchTrailerButton.layer.cornerRadius = cell.watchTrailerButton.bounds.size.height / 2.0
             
+            cell.trailerLink = trailerLink
             return cell
         case let .description(contents):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdn, for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell() }

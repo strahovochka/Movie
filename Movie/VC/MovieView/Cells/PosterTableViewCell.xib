@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="PosterTableViewCell" customModule="Movie" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="PosterTableViewCell" customModule="Movie" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="361" height="190"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -51,13 +51,16 @@
                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                         </buttonConfiguration>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-HE-PZx">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-HE-PZx">
                         <rect key="frame" x="128" y="104.66666666666667" width="122.33333333333331" height="28.333333333333329"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="WATCH TRAILER" cornerStyle="capsule">
                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="onWatchTrailerTouched:" destination="KGk-i7-Jjw" eventType="touchDown" id="3Zv-Ze-0Q2"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
