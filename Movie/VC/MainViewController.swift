@@ -3,16 +3,49 @@ import UIKit
 class MainViewController: UIViewController {
 
     private var movies: [Movies.Movie] = Movies().movies
+    private var sorting: SortingManager = NameSort()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        configTable()
+        configSortButton()
+    }
+    
+    private func configTable() {
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+        sorting.sort(movies: &movies)
+    }
+    
+    private func configSortButton() {
+        let action = { (action: UIAction) in
+            switch action.title {
+            case "Name":
+                self.sorting = NameSort()
+            case "Date":
+                self.sorting = DateSort()
+            default:
+                break
+            }
+            
+            self.sortButton.setImage(action.image, for: .normal)
+            self.sortButton.setTitle(action.title, for: .normal)
+            self.sorting.sort(movies: &self.movies)
+            self.tableView.reloadData()
+        }
+        
+        sortButton.menu = UIMenu(children: [UIAction(title: "Name", image: UIImage(systemName: "textformat.size"), handler: action), UIAction(title: "Date", image: UIImage(systemName: "calendar"), handler: action)])
+        
+        sortButton.showsMenuAsPrimaryAction = true
+        sortButton.changesSelectionAsPrimaryAction = true
+        
     }
 
 

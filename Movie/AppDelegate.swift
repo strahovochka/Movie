@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Movie
-//
-//  Created by Jane Strashok on 27.12.2023.
-//
-
 import UIKit
 import CoreData
 
