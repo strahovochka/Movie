@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" title="Movies" largeTitleDisplayMode="always" id="DPV-JF-Jrk">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="9j3-uq-ZFS">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" id="WPM-3f-jPy">
-                                <rect key="frame" x="299.33333333333331" y="11" width="71" height="22"/>
+                                <rect key="frame" x="306" y="11" width="71" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <menu key="menu" id="FIB-6a-ARB">
@@ -68,11 +68,22 @@
                     <connections>
                         <outlet property="sortButton" destination="WPM-3f-jPy" id="Eze-LZ-c9p"/>
                         <outlet property="tableView" destination="bWt-A4-fd6" id="oIg-82-ldx"/>
+                        <segue destination="Cxr-RC-AgP" kind="show" identifier="toMovieVC" id="MsP-hK-yeS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLh-AN-qtB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="191"/>
+        </scene>
+        <!--MovieInitialVC-->
+        <scene sceneID="ECV-sy-fwc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Movie" referencedIdentifier="MovieInitialVC" id="Cxr-RC-AgP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cBe-CE-JAD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRv-wf-tct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="37"/>
         </scene>
     </scenes>
     <resources>
