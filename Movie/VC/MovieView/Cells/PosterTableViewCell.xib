@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="PosterTableViewCell" customModule="Movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-L1-lJH">
+                        <rect key="frame" x="16" y="16" width="100" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="GNf-U9-fxd"/>
+                            <constraint firstAttribute="height" constant="150" id="TTh-Se-jc4"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jY4-IV-FzL">
+                        <rect key="frame" x="128" y="22" width="225" height="20.333333333333329"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoS-jK-gNX">
+                                <rect key="frame" x="0.0" y="0.0" width="175" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZd-g3-9b5">
+                                <rect key="frame" x="175" y="0.0" width="50" height="20.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Iuq-1R-N67"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLY-Z2-oCn">
+                        <rect key="frame" x="128" y="64.333333333333329" width="63.666666666666657" height="28.333333333333329"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Button" cornerStyle="capsule">
+                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
+                        </buttonConfiguration>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-HE-PZx">
+                        <rect key="frame" x="128" y="104.66666666666667" width="122.33333333333331" height="28.333333333333329"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="WATCH TRAILER" cornerStyle="capsule">
+                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="onWatchTrailerTouched:" destination="KGk-i7-Jjw" eventType="touchDown" id="3Zv-Ze-0Q2"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tuM-HE-PZx" firstAttribute="top" secondItem="oLY-Z2-oCn" secondAttribute="bottom" constant="12" id="4Wg-qD-WeA"/>
+                    <constraint firstItem="m6B-L1-lJH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="B7g-1M-r0l"/>
+                    <constraint firstItem="m6B-L1-lJH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="FnI-nY-MhP"/>
+                    <constraint firstItem="jY4-IV-FzL" firstAttribute="top" secondItem="m6B-L1-lJH" secondAttribute="top" constant="6" id="R4f-hX-hmB"/>
+                    <constraint firstItem="jY4-IV-FzL" firstAttribute="leading" secondItem="m6B-L1-lJH" secondAttribute="trailing" constant="12" id="WP1-5V-XJD"/>
+                    <constraint firstItem="oLY-Z2-oCn" firstAttribute="top" secondItem="jY4-IV-FzL" secondAttribute="bottom" constant="22" id="Zge-Nf-mXb"/>
+                    <constraint firstAttribute="trailing" secondItem="jY4-IV-FzL" secondAttribute="trailing" constant="8" id="asM-Ib-G27"/>
+                    <constraint firstAttribute="bottom" secondItem="m6B-L1-lJH" secondAttribute="bottom" constant="16" id="cO0-SY-IHO"/>
+                    <constraint firstItem="tuM-HE-PZx" firstAttribute="leading" secondItem="oLY-Z2-oCn" secondAttribute="leading" id="rUy-7p-CeS"/>
+                    <constraint firstItem="oLY-Z2-oCn" firstAttribute="leading" secondItem="jY4-IV-FzL" secondAttribute="leading" id="ucI-2k-NVI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addToWatchlistButton" destination="oLY-Z2-oCn" id="GmK-NA-S1D"/>
+                <outlet property="posterImage" destination="m6B-L1-lJH" id="oRB-pX-J7v"/>
+                <outlet property="rating" destination="mZd-g3-9b5" id="k5v-Fp-19e"/>
+                <outlet property="title" destination="BoS-jK-gNX" id="yNF-Ku-62W"/>
+                <outlet property="watchTrailerButton" destination="tuM-HE-PZx" id="lYB-AI-fnf"/>
+            </connections>
+            <point key="canvasLocation" x="51.145038167938928" y="71.126760563380287"/>
+        </tableViewCell>
+    </objects>
+</document>

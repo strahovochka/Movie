@@ -47,12 +47,24 @@ class MainViewController: UIViewController {
         sortButton.changesSelectionAsPrimaryAction = true
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieVC = segue.destination as? MovieViewController {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let movie = movies[row]
+                movieVC.movie = movie
+            }
+        }
+    }
 
 
 }
 
 extension MainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toMovieVC", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension MainViewController: UITableViewDataSource{
